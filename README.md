@@ -1,25 +1,27 @@
-NOTICE
-======
+JWT Implementation in PHP
+=========================
 
-This project is forked from firebase/php-jwt with some small changes:
-
-    1) Namespaced
-    2) Added composer.json
-
-To use the library, composer autoloader will take care of include_once, so skip
-that step below.
+[![Travis](https://travis-ci.org/nixilla/php-jwt.png)](https://travis-ci.org/nixilla/php-jwt)
 
 ```php
 <?php
-    use JWT\Authentication\JWT;
+require_once './vendor/autoload.php';
 
-    // ...
-
-    $jwt = JWT::encode($token, $key);
-    $decoded = JWT::decode($jwt, $key);
+$jwt = JWT::encode($token, $key);
+$decoded = JWT::decode($jwt, $key);
 ?>
 ```
 
+Installation
+============
+
+```json
+{
+    "require": {
+        "nixilla/php-jwt": "dev-master"
+    }
+}
+```
 
 PHP-JWT
 =======
@@ -30,20 +32,20 @@ Example
 -------
 ```php
 <?php
-  include_once 'Authentication/JWT.php';
+require_once './vendor/autoload.php';
 
-  $key = "example_key";
-  $token = array(
+$key = "example_key";
+$token = array(
     "iss" => "http://example.org",
     "aud" => "http://example.com",
     "iat" => 1356999524,
     "nbf" => 1357000000
-  );
+);
 
-  $jwt = JWT::encode($token, $key);
-  $decoded = JWT::decode($jwt, $key);
+$jwt = JWT::encode($token, $key);
+$decoded = JWT::decode($jwt, $key);
 
-  print_r($decoded);
+print_r($decoded);
 ?>
 ```
 
@@ -52,12 +54,12 @@ Tests
 Run the tests using phpunit:
 
 ```bash
-    $ pear install PHPUnit
-    $ phpunit tests/
-    PHPUnit 3.7.10 by Sebastian Bergmann.
-    .....
-    Time: 0 seconds, Memory: 2.50Mb
-    OK (5 tests, 5 assertions)
+git clone https://github.com/jwmickey/php-jwt.git && \
+cd php-jwt && \
+mkdir bin && \
+curl -sS https://getcomposer.org/installer | php -- --install-dir=bin && \
+./bin/composer.phar install --dev && \
+./bin/phpunit
 ```
 
 License
