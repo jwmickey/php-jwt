@@ -1,7 +1,7 @@
 JWT Implementation in PHP
 =========================
 
-[![Travis](https://travis-ci.org/nixilla/php-jwt.png)](https://travis-ci.org/nixilla/php-jwt)
+[![Travis](https://travis-ci.org/jwmickey/php-jwt.png)](https://travis-ci.org/jwmickey/php-jwt)
 
 ```php
 <?php
@@ -18,7 +18,7 @@ Installation
 ```json
 {
     "require": {
-        "nixilla/php-jwt": "dev-master"
+        "jwmickey/php-jwt": "dev-master"
     }
 }
 ```

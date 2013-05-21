@@ -1,5 +1,5 @@
 {
-    "name": "nixilla/php-jwt",
+    "name": "jwmickey/php-jwt",
     "description": "Json Web Token for PHP",
     "type": "library",
     "keywords": [ "jwt" ],
