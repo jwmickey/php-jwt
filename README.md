@@ -1,6 +1,13 @@
 JWT Implementation in PHP
 =========================
 
+Attention!
+==========
+
+This was forked from firebase/php-jwt, which now has it's own composer.json file.  I recommend you use the original source as this fork is no longer maintained.  
+
+
+
 [![Travis](https://travis-ci.org/jwmickey/php-jwt.png)](https://travis-ci.org/jwmickey/php-jwt)
 
 ```php
